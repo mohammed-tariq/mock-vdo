@@ -1,0 +1,303 @@
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+
+.main {
+  display: flex;
+}
+
+
+
+
+.active {
+  color: #ffce00;
+  font-weight: 600;
+}
+
+
+
+
+
+
+.navigation-container {
+  display: flex;
+  z-index: 99999;
+  height: 96vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+
+.navigation-container div {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: #15161c;
+  cursor: pointer;
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  border: 1px solid #63646a4f;
+}
+
+.navigation-container div:hover {
+  background: #63646a4f;
+}
+
+.nav-up {
+  margin-top: 5rem;
+}
+
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  padding-top: 5rem;
+  scroll-padding-top: 5rem;
+}
+
+.vdo-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.6rem;
+  scroll-snap-align: start;
+  padding-bottom: 10rem;
+
+}
+
+.vdo-main-video {
+  display: flex;
+  position: relative;
+}
+
+
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+.video {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  max-width: calc((9 / 16) * 80vh);
+  background: #15161c;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.2s;
+  transform: translateY(-50px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.734), transparent);
+}
+
+.video:hover > .controls {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+
+.video:hover {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+
+.play-pause {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: #00000075;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.show-play-pause {
+  transform: translate(-50%, -50%) scale(1) !important;
+  opacity: 1 !important;
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+}
+
+.user-info div {
+  display: flex;
+  align-items: center;
+}
+
+.user-info div span {
+  margin-left: 0.5rem;
+}
+
+.user-info button {
+  background: #18e588;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.reaction {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+.reaction div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.reaction div span {
+  margin-top: 5px;
+}
+
+
+.like {
+  color: #f81348;
+  animation: like 0.3s ease-in forwards;
+  background: #f813482b;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unlike {
+  animation: unlike 0.17s ease-in reverse forwards;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 930px) {
+
+  .navigation-container {
+    margin-right: 1rem;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .search-container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .reaction {
+    position: absolute;
+    right: 0;
+    bottom: 8rem;
+    color: #fff;
+  }
+
+  .reaction .value {
+    font-size: 0.5rem;
+  }
+
+  .navigation-container {
+    display: none;
+  }
+
+  .video-container {
+    align-items: center;
+  }
+}
+
+@keyframes like {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes unlike {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
