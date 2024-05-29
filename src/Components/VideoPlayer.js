@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { CiPlay1 , CiPause1 , CiHeart } from "react-icons/ci";
 import { FaComment, FaHeart, FaShare } from "react-icons/fa";
+import DisplayComments from '../Components/displayComments'
 
 function VideoPlayer({ video, containerRef }) {
   const playPauseRef = useRef();
   const videoRef = useRef();
 
   const [isPlaying, setIsPlaying] = useState(true);
+  const [showComment,setShowComment] =  useState(false)
   const [isLiked, setIsLiked] = useState(video.reaction.isLiked);
 
   useEffect(() => {
@@ -26,6 +28,13 @@ function VideoPlayer({ video, containerRef }) {
     //   }
     // });
   }, [containerRef]);
+
+
+
+  const handleComment = ()=>{
+    setShowComment(!showComment)
+  }
+
 
   async function handleVideo() {
     const videoTop = videoRef.current.getBoundingClientRect().top;
@@ -92,8 +101,18 @@ function VideoPlayer({ video, containerRef }) {
           >
             <CiPlay1 />
           </div>
-    
+          {showComment && <div className="comment-section">
+          <DisplayComments comment={video.comments}  />
+      </div>}
         </div>
+        {!showComment && <div className="foot">
+            <div className="title">{video.title}</div>
+            <div className="user-info">
+              <div>
+                <span>{video.username}</span>
+              </div>
+            </div>
+          </div>}
         <div className="reaction">
           <div
             className=""
@@ -109,14 +128,14 @@ function VideoPlayer({ video, containerRef }) {
 
             <span className="value">{video.reaction.likes}</span>
           </div>
-          <div>
+          <div onClick={handleComment}>
           <FaComment />
             <span className="value">{video.reaction.comments}</span>
           </div>
           <div>
           <FaShare />
           </div>
-      
+     
         </div>
       </div>
     </div>

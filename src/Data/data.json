@@ -10,6 +10,29 @@
             "likes": "1.1M",
             "comments": "40K",
             "isLiked": true
+        },
+        "comments":{
+           "text":"amazing",
+           "user":"alan",
+           "replies":[
+            {
+                "text":"Cool",
+                "user":"adam",
+                "replies":[
+                    {
+                        "text":"Cool",
+                        "user":"adam",
+                        "replies":[]
+                    }
+                ]
+            },
+            {
+                "text":"nice",
+                "user":"imran",
+                "replies":[]
+            }
+            ]
+
         }
     },
     {
@@ -23,7 +46,25 @@
             "likes": "100K",
             "comments": "10K",
             "isLiked": false
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"gautham",
+            "replies":[
+             {
+                 "text":"nice",
+                 "user":"harish",
+                 "replies":[
+                     {
+                         "text":"Wowww",
+                         "user":"ganesh",
+                         "replies":[]
+                     }
+                 ]
+             }
+             ]
+ 
+         }
     },
     {
         "id": "3",
@@ -36,7 +77,30 @@
             "likes": "600K",
             "comments": "20K",
             "isLiked": true
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"alan",
+            "replies":[
+             {
+                 "text":"Cool",
+                 "user":"adam",
+                 "replies":[
+                     {
+                         "text":"Cool",
+                         "user":"adam",
+                         "replies":[]
+                     }
+                 ]
+             },
+             {
+                 "text":"nice",
+                 "user":"imran",
+                 "replies":[]
+             }
+             ]
+ 
+         }
     },
     {
         "id": "4",
@@ -49,7 +113,30 @@
             "likes": "700K",
             "comments": "30K",
             "isLiked": false
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"alan",
+            "replies":[
+             {
+                 "text":"Cool",
+                 "user":"adam",
+                 "replies":[
+                     {
+                         "text":"Cool",
+                         "user":"adam",
+                         "replies":[]
+                     }
+                 ]
+             },
+             {
+                 "text":"nice",
+                 "user":"imran",
+                 "replies":[]
+             }
+             ]
+ 
+         }
     },
     {
         "id": "5",
@@ -62,7 +149,30 @@
             "likes": "50K",
             "comments": "1K",
             "isLiked": true
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"alan",
+            "replies":[
+             {
+                 "text":"Cool",
+                 "user":"adam",
+                 "replies":[
+                     {
+                         "text":"Cool",
+                         "user":"adam",
+                         "replies":[]
+                     }
+                 ]
+             },
+             {
+                 "text":"nice",
+                 "user":"imran",
+                 "replies":[]
+             }
+             ]
+ 
+         }
     },
     {
         "id": "6",
@@ -75,7 +185,30 @@
             "likes": "2.1M",
             "comments": "90K",
             "isLiked": false
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"alan",
+            "replies":[
+             {
+                 "text":"Cool",
+                 "user":"adam",
+                 "replies":[
+                     {
+                         "text":"Cool",
+                         "user":"adam",
+                         "replies":[]
+                     }
+                 ]
+             },
+             {
+                 "text":"nice",
+                 "user":"imran",
+                 "replies":[]
+             }
+             ]
+ 
+         }
     },
     {
         "id": "7",
@@ -88,6 +221,29 @@
             "likes": "3.1M",
             "comments": "100K",
             "isLiked": true
-        }
+        },
+        "comments":{
+            "text":"amazing",
+            "user":"alan",
+            "replies":[
+             {
+                 "text":"Cool",
+                 "user":"adam",
+                 "replies":[
+                     {
+                         "text":"Cool",
+                         "user":"adam",
+                         "replies":[]
+                     }
+                 ]
+             },
+             {
+                 "text":"nice",
+                 "user":"imran",
+                 "replies":[]
+             }
+             ]
+ 
+         }
     }
 ]

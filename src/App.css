@@ -113,6 +113,20 @@ video {
   background: #15161c;
 }
 
+.reply-btn{
+  margin: 10px;
+  color: blue;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.comment-text{
+  margin-right: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
 .controls {
   position: absolute;
   top: 0;
@@ -135,12 +149,69 @@ video {
   transform: translateY(0);
 }
 
+.comment-section{
+  height: 50vh;
+  background-color: rgb(31, 31, 31);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  animation: slide 0.5s ease;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
 
+.profile{
+  width: 20px;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.d-flex{
+  display: flex;
+  flex-direction: row;
+}
+
+.replies{
+  padding: 10px;
+}
+
+.foot {
+  position: absolute;
+  bottom: 0;
+  width: 78%;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: all 0.2s;
+  background: rgba(0, 0, 0, 0.7);
+
+  border-radius: 10px;
+}
+
+.video:hover > .foot {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.title {
+  color: #fff;
+}
+
+.user-info div {
+  display: flex;
+  align-items: center;
+}
+
+.user-info div span {
+  margin-left: 0.5rem;
+}
 
 
 
 .video:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.839);
   backdrop-filter: blur(3px);
 }
 
@@ -278,6 +349,14 @@ video {
   }
 }
 
+
+@media screen and (max-width: 590px) {
+  .foot{
+    width: 100%;
+  }
+
+}
+
 @keyframes like {
   0% {
     transform: scale(0);
@@ -299,5 +378,15 @@ video {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+
+@keyframes slide {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
